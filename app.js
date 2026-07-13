@@ -2,6 +2,9 @@ let listaDeNumeros = [];
 let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
+alert ("Bem vindo(a) ao meu primeiro projeto!");
+alert ("Projeto criado por Jhonata Duarte no curso de desenvolvimento de sites da Alura");
+let nomeJogador = prompt("Antes de tudo, me diga seu nome? (Fique tranquilo, é só para ser usado no jogo)");
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -21,7 +24,7 @@ function verificarChute() {
     if (chute == numeroSecreto) {
         exibirTextoNaTela("h1", "Acertou!");
         let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
-        let mensagemTentativas = `Você descobriu o número secreto em ${tentativas} ${palavraTentativa}!`;
+        let mensagemTentativas = `Muito bem ${nomeJogador} descobriu o número secreto em ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela("p", mensagemTentativas);
         document.getElementById("reiniciar").removeAttribute("disabled");
     } else { 
